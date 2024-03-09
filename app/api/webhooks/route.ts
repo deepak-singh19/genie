@@ -73,6 +73,9 @@ export async function POST(req: Request) {
     };
 
     //comment debug
+    ///Users/deepaksingh/Desktop/SaaS/geinie/app/api/webhooks/clerk/route.ts
+    //https://genie-cwcghvixv-deepak-singhs-projects-3097c384.vercel.app/
+    //https://genie-7zim9edwh-deepak-singhs-projects-3097c384.vercel.app/api/webhooks/clerk
 
     console.log(":here")
 
