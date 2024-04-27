@@ -5,6 +5,7 @@ import TransformationForm from '@/components/shared/TransformationForm';
 import { auth } from '@clerk/nextjs';
 import { getUserById } from '@/lib/actions/user.actions';
 import { redirect } from 'next/navigation';
+import { SearchParamProps, TransformationTypeKey } from '@/types';
 
 const AddTransformationTypePage = async({params:{type}}: SearchParamProps) => {
 
