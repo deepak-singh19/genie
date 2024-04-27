@@ -1,5 +1,6 @@
 "use client"
 import { dataUrl, debounce, download, getImageSize } from "@/lib/utils";
+import { TransformedImageProps } from "@/types";
 import { CldImage, getCldImageUrl } from "next-cloudinary";
 import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
@@ -11,10 +12,10 @@ const TransformedImage = ({
   type,
   isTransforming,
   setIsTransforming,
-  hasDownloaded = true,
+  hasDownload = true,
   title,
   transformationConfig,
-}: TransformedProps) => {
+}: TransformedImageProps) => {
 
 
 
@@ -33,7 +34,7 @@ const TransformedImage = ({
     <div className="flex flex-col gap-4 z-0">
       <div className="flex-between">
         <h3 className="h3-bold text-dark-600">Transformed</h3>
-        {hasDownloaded && (
+        {hasDownload && (
           <button className="download-btn" onClick={downloadHandler}>
             <Image
               src="/assets/icons/download.svg"

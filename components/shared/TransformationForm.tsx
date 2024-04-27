@@ -35,6 +35,7 @@ import { addImage, updateImage } from "@/lib/actions/image.actions"
 // import { addImage, updateImage } from "@/lib/actions/image.actions"
 import { useRouter } from "next/navigation"
 import InsufficientCreditsModal from '../shared/InsufficientCreditsModal';
+import { TransformationFormProps, Transformations } from "@/types"
 
  
 export const formSchema = z.object({
@@ -84,18 +85,31 @@ const TransformationForm = ({action, data= null, type, userId,creditBalance, con
       const transformationUrl = getCldImageUrl({
         width: image?.width,
         height: image?.height,
-        src: image?.publicId,
+        src: image?.publicId || "",
         ...transformationConfig
       })
 
-      const imageData= {
+      // const imageData= {
+      //   title: values.title,
+      //   publicId: image?.publicId,
+      //   transformationType: type,
+      //   width: image?.width,
+      //   height: image?.height,
+      //   config: transformationConfig,
+      //   secureURL: image?.secureURL, // Provide a default value or handle asynchronously
+      //   transformationURL: transformationUrl,
+      //   aspectRatio: values.aspectRatio,
+      //   prompt: values.prompt,
+      //   color: values.color,
+      // };
+      const imageData = {
         title: values.title,
-        publicId: image?.publicId,
+        publicId: image?.publicId || "", // Provide a default value of an empty string if image?.publicId is undefined
         transformationType: type,
-        width: image?.width,
-        height: image?.height,
+        width: image?.width || 0, // Provide a default value of 0 if image?.width is undefined
+        height: image?.height || 0, // Provide a default value of 0 if image?.height is undefined
         config: transformationConfig,
-        secureURL: image?.secureURL, // Provide a default value or handle asynchronously
+        secureURL: image?.secureURL || "", // Provide a default value of an empty string if image?.secureURL is undefined
         transformationURL: transformationUrl,
         aspectRatio: values.aspectRatio,
         prompt: values.prompt,
@@ -130,10 +144,10 @@ const TransformationForm = ({action, data= null, type, userId,creditBalance, con
           const updatedImage = await updateImage({
             image: {
               ...imageData,
-              _id: data._id
+              _id: data?._id
             },
             userId,
-            path: `/transformations/${data._id}`
+            path: `/transformations/${data?._id}`
           })
 
           if(updatedImage) {
