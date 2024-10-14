@@ -64,7 +64,7 @@ yarn dev
 
 For support, email deepak96153@gmail.com
 
-## Key Features
+## 🔑Key Features
 
 1. Clerk Authentication
 - Clerk handles all user authentication, from sign-up to session management. To configure Clerk:
@@ -86,23 +86,6 @@ For support, email deepak96153@gmail.com
 4. Responsive and Mobile-Ready
 - The app is optimized for all screen sizes, ensuring a smooth - user experience on both mobile and desktop devices.
 
-
-
-## 🗂️ Project Structure
-bash
-Copy code
-.
-├── components        # Reusable UI components
-├── pages
-│   ├── api           # API routes for handling backend logic
-│   ├── index.tsx     # Main landing page
-│   └── dashboard     # User dashboard for image customization
-├── public            # Static assets (images, fonts, etc.)
-├── styles            # Global and component-specific styles
-├── utils             # Helper functions and API integrations
-├── .env.local        # Environment variables
-└── README.md         # Project documentation
-🔑
 
 
 
