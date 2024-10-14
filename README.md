@@ -26,7 +26,7 @@ This web app allows users to customize images with AI-powered features like back
 Clone the project
 
 ```bash
-  git clone https://github.com/your-username/image-customization-app.git
+  git clone https://github.com/deepak-singh19/genie.git
 
 ```
 
