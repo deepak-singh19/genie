@@ -19,13 +19,6 @@ This web app allows users to customize images with AI-powered features like back
 - Payments: Stripe
 - Image Processing: AI-powered APIs or third-party services
 - Deployment: Vercel, MongoDB Atlas
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
 
 
 ## Run Locally
@@ -89,7 +82,7 @@ For support, email deepak96153@gmail.com
 
 
 
-##📦 Deployment
+## 📦Deployment
 Frontend (Vercel)
 Deploy the app to Vercel by connecting your GitHub repository. Vercel automatically handles the deployment and environment variables.
 
