@@ -1,17 +1,17 @@
 
-# Image Customization Web App
+# 🖼️Image Customization Web App
 
 This web app allows users to customize images with AI-powered features like background removal, resizing, recoloring, and more. Built with Next.js, it uses Clerk for authentication and Stripe for payments, enabling a seamless user experience for both free and premium features.
 
 
-## Features
+## 🚀Features
 
 - User Authentication: Sign up, log in, and secure access with Clerk.
 - Payment System: Subscription-based premium features powered by Stripe.
 - Image Customization
 - Responsive Design: Optimized for all devices, including mobile and desktop.
 
-## Tech
+## 🛠️ Tech
 
 - Frontend: Next.js, React, TypeScript, TailwindCSS
 - Backend: Node.js, Express.js, MongoDB
